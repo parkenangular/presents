@@ -44,17 +44,4 @@
                         
                     }
                     else
-                        return redirect()->route('test-question',[$test->id])->withError('Excel File is Empty');
-                }
-                else
-                    return redirect()->route('test-question',[$test->id])->withError('No Excel File uploaded');
-            }
-            else
-            {
-                return redirect()->route('test-question',[$test->id])->withError('Invalid Test Identification');
-            }
-        } catch (\Exception $e) {
-            return redirect()->back()->withError('Oops,something wrong !');
-        }
-        
-    }
+     
