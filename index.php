@@ -40,6 +40,7 @@
                             $this->question->insert($insert);
                             return redirect()->route('test-question',[$test->id])->withSuccess('Questions have been addedd Successfully.');
                         }
+ child
                         else
                         {
                           return redirect()->route('test-question',[$test->id])->withError('No questions found in the excel file');  
@@ -61,3 +62,10 @@
         }
         
     }
+
+                      
+                        
+                    }
+                   
+     
+ main
