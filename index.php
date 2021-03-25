@@ -40,8 +40,32 @@
                             $this->question->insert($insert);
                             return redirect()->route('test-question',[$test->id])->withSuccess('Questions have been addedd Successfully.');
                         }
+ child
+                        else
+                        {
+                          return redirect()->route('test-question',[$test->id])->withError('No questions found in the excel file');  
+                        }
+                        
+                    }
+                    else
+                        return redirect()->route('test-question',[$test->id])->withError('Excel File is Empty');
+                }
+                else
+                    return redirect()->route('test-question',[$test->id])->withError('No Excel File uploaded');
+            }
+            else
+            {
+                return redirect()->route('test-question',[$test->id])->withError('Invalid Test Identification');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->withError('Oops,something wrong !');
+        }
+        
+    }
+
                       
                         
                     }
                    
      
+ main
